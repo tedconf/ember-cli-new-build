@@ -44,7 +44,7 @@ export default Ember.Service.extend({
 
       request.then(function(response) {
         if (response && response.version && response.version > currentVersion) {
-          service.set('isAvailable', true);
+          service.set('newBuildIsAvailable', true);
         } else {
           Ember.run.later(service, 'check', 30000);
         }
