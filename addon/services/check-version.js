@@ -18,7 +18,7 @@ export default Ember.Service.extend({
   currentVersion: computedMetaTag('front-end-build-version'),
   url: computedMetaTag('front-end-build-url'),
 
-  isPollable: Ember.computed('currentVerison', 'url', function() {
+  isPollable: Ember.computed('currentVersion', 'url', function() {
     var env = this.get('environment.environment');
 
     return env !== "development" &&
